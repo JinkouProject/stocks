@@ -89,8 +89,8 @@ st.write("---")
 col3, col4 = st.columns(2)
 
 with col3:
-    buy_threshold = st.number_input(label="Buy Threshold")
-    sell_threshold = st.number_input(label="Sell Threshold")
+    buy_threshold = st.number_input(label="Buy Threshold", min_value=0.001, step=0.001, format="%f")
+    sell_threshold = st.number_input(label="Sell Threshold", min_value=0.001, step=0.001, format="%f")
 
 with col4:
     starting_bankroll = st.number_input(label="Kapital", step=100)
